@@ -42,9 +42,10 @@
   ([amount] (make-money amount (:usd currencies)))
   ([amount currency] (->Money amount currency)))
 
-(make-money)
-(make-money 1)
-(make-money 5 (:eur currencies))
+(def a (make-money))
+(def b (make-money 1))
+(def c (make-money 5 (:eur currencies)))
+(def d (make-money 12))
 
 
 
