@@ -5,8 +5,8 @@
 (ns offline-4clojure.p16
   (:use clojure.test))
 
-(def __
-;; your solution here
+(defn __ [person-name]
+(str "Hello, " person-name "!")
 )
 
 (defn -main []

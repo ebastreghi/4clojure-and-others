@@ -5,11 +5,8 @@
 (ns offline-4clojure.p1
   (:use clojure.test))
 
-(def __
-;; your solution here
-)
+(def __ true)
 
 (defn -main []
   (are [soln] soln
-(= __ true)
-))
+(= __ true)))

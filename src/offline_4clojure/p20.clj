@@ -5,8 +5,9 @@
 (ns offline-4clojure.p20
   (:use clojure.test))
 
-(def __
-;; your solution here
+(defn __ [coll]
+  ;(second (reverse coll))
+  ((comp last butlast) coll)
 )
 
 (defn -main []

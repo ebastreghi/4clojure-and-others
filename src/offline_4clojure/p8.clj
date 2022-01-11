@@ -6,7 +6,7 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
+  #{:c :b :d :a}
 )
 
 (defn -main []

@@ -6,8 +6,8 @@
   (:use clojure.test))
 
 (def __
-;; your solution here
-)
+'(6 7)
+  )
 
 (defn -main []
   (are [soln] soln

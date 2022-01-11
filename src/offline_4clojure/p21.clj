@@ -5,8 +5,9 @@
 (ns offline-4clojure.p21
   (:use clojure.test))
 
-(def __
-;; your solution here
+(defn __ [coll index]
+(nth coll index)
+  ;(first (drop index coll))
 )
 
 (defn -main []

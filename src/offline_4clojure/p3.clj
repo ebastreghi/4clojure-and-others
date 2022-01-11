@@ -5,11 +5,12 @@
 (ns offline-4clojure.p3
   (:use clojure.test))
 
-(def __
-;; your solution here
-)
+(def __ (.toUpperCase "hello world"))
 
 (defn -main []
   (are [soln] soln
-(= __ (.toUpperCase "hello world"))
-))
+              (= __ (.toUpperCase "hello world"))))
+
+(defn -main2 []
+  (are [result soln] (= result soln)
+              __ (.toUpperCase "hello world")))
