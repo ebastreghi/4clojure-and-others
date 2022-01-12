@@ -5,8 +5,8 @@
 (ns offline-4clojure.p25
   (:use clojure.test))
 
-(def __
-;; your solution here
+(defn __ [coll]
+(filter odd? coll)
 )
 
 (defn -main []

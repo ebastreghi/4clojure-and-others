@@ -5,8 +5,8 @@
 (ns offline-4clojure.p24
   (:use clojure.test))
 
-(def __
-;; your solution here
+(defn __ [coll]
+(reduce + coll)
 )
 
 (defn -main []
