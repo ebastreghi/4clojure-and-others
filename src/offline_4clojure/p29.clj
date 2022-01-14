@@ -5,9 +5,14 @@
 (ns offline-4clojure.p29
   (:use clojure.test))
 
-(def __
-;; your solution here
+(def capital-set #{"A" "B" "C" "D" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S" "T" "U" "V" "W" "X" "Y" "Z"})
+
+(defn ___ [coll]
+  (apply str (filter #(capital-set (str %)) (seq coll)))
 )
+
+(defn __ [coll]
+  (clojure.string/join (re-seq #"[A-Z]+" coll)))
 
 (defn -main []
   (are [soln] soln

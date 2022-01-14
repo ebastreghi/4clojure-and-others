@@ -6,9 +6,8 @@
 (ns offline-4clojure.p27
   (:use clojure.test))
 
-(def __
-;; your solution here
-)
+(defn __ [coll]
+(= (seq coll) (reverse coll)))
 
 (defn -main []
   (are [soln] soln
