@@ -18,13 +18,23 @@
   (if (= 0 length-fib)
     init-vector
     (let [butlast-item (last (butlast init-vector))
-          last-item (last init-vector)]
-    (recur (conj init-vector (+ butlast-item last-item))
+          last-item (last init-vector)
+          item-to-add (+ butlast-item last-item)]
+    (recur (conj init-vector item-to-add)
            (- length-fib 1))))))
+
+(defn my-lazy-version
+    ([length-fibonacci] (my-lazy-version length-fibonacci 1 1))
+    ([length-fib butlast-item last-item]
+     (lazy-seq
+       (if (= 0 length-fib)
+         nil
+         (cons butlast-item (my-lazy-version (- length-fib 1) last-item (+ last-item butlast-item)))))))
 
 (defn fib
   ([] (fib 1 1))
   ([butlast-i last-i] (lazy-seq (cons butlast-i (fib last-i (+ last-i butlast-i))))))
+;(take 5 (fib))
 
 
 (defn -main []
