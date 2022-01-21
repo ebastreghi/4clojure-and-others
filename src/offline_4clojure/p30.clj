@@ -5,6 +5,8 @@
 (ns offline-4clojure.p30
   (:use clojure.test))
 
+(declare simplest-solution)
+
 (defn next-is-equal? [elem coll]
   (= elem (first coll)))
 
@@ -19,6 +21,11 @@
       acc)))
 
 (defn __ [coll] (remove-consecutive coll))
+
+(defn simplest-solution [coll]
+  (dedupe coll))
+
+;(map first (partition-by identity xs))
 
 (defn -main []
   (are [soln] soln
