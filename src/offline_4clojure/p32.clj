@@ -5,9 +5,11 @@
 (ns offline-4clojure.p32
   (:use clojure.test))
 
-(def __
-;; your solution here
-)
+(defn __ [coll]
+  (mapcat #(repeat 2 %) coll))
+
+#_(defn __ [coll]
+  (interleave coll coll))
 
 (defn -main []
   (are [soln] soln

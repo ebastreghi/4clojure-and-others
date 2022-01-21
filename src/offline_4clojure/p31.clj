@@ -5,8 +5,8 @@
 (ns offline-4clojure.p31
   (:use clojure.test))
 
-(def __
-;; your solution here
+(defn __ [coll]
+(partition-by identity coll)
 )
 
 (defn -main []

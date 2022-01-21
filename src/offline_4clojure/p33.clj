@@ -5,8 +5,8 @@
 (ns offline-4clojure.p33
   (:use clojure.test))
 
-(def __
-;; your solution here
+(defn __ [coll rep]
+(mapcat #(repeat rep %) coll)
 )
 
 (defn -main []
