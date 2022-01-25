@@ -5,8 +5,8 @@
 (ns offline-4clojure.p39
   (:use clojure.test))
 
-(def __
-;; your solution here
+(defn __ [coll1 coll2]
+  (interleave coll1 coll2)
 )
 
 (defn -main []

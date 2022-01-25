@@ -6,7 +6,8 @@
   (:use clojure.test))
 
 (defn __ [begin end]
-(range begin end)
+  ;(range begin end)
+  (take (- end begin) (iterate inc begin))
 )
 
 (defn -main []

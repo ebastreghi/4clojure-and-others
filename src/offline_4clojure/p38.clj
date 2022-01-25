@@ -5,8 +5,11 @@
 (ns offline-4clojure.p38
   (:use clojure.test))
 
-(def __
-;; your solution here
+(defn __ [& args]
+  (-> args
+      sort
+      last)
+  ;(partial max)
 )
 
 (defn -main []
